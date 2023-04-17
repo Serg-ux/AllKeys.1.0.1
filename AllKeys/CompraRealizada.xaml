@@ -1,0 +1,31 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllKeys"
+        xmlns:materialDesignMahApps="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="AllKeys.CompraRealizada"
+        mc:Ignorable="d"
+        Title="CompraRealizada"  d:Height="720" d:Width="1280"
+         WindowStartupLocation="CenterScreen"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"  
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="16"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Grid Background="#02735E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="527*"></RowDefinition>
+            <RowDefinition Height="177*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label HorizontalAlignment="Center" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="568" FontFamily="Miriam Libre" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label Content="¡COMPRA REALIZADA!"/>
+        </Label>
+        <WrapPanel Orientation="Horizontal"  Width="350" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="127">
+            <Button x:Name="btInicio" ToolTip="Volver a la pagina principal" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesignMahApps:PackIcon Kind=ArrowBack}"   FontSize="16" Height="43"  Margin="0,0,40,0" Width="152" Cursor="Hand" Click="btInicio_Click"     />
+            <Button x:Name="btImprimir" Content="Imprimir Ticket" ToolTip="Imprimir el ticket de la compra"  FontSize="16" Height="43" Width="152" Cursor="Hand" Click="btImprimir_Click"     />
+        </WrapPanel>
+        <Image HorizontalAlignment="Center" Height="304"  VerticalAlignment="Bottom" Margin="0,0,0,30" Width="307" Source="/Allkeys-removebg-preview.png"/>
+
+    </Grid>
+</Window>

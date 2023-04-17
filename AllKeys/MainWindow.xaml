@@ -1,0 +1,45 @@
+﻿<Window x:Class="AllKeys.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllKeys"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Login" Height="650" MinHeight="650" MaxHeight="650" Width="550" MinWidth="550" MaxWidth="550" WindowStartupLocation="CenterScreen">
+    <Grid Name="gContenedor"  Background="#02735E"  IsEnabled="True" Visibility="Visible">
+
+        <GroupBox Header="Inicio de sesión"  Grid.Row="0" Margin="12,16,12,16"  Grid.RowSpan="2" Grid.Column="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Image  Height="180" VerticalAlignment="Center" HorizontalAlignment="Center" Width="182" Source="/Allkeys-removebg-preview.png"/>
+                <TextBox x:Name="txtNombre" FontSize="16" FontWeight="Bold"  materialDesign:HintAssist.Hint="Usuario" MaxLength="30" Margin="23,38,79,136" Grid.Row="1"/>
+                <PasswordBox
+                      x:Name="pb_contra" FontSize="16"
+                      materialDesign:HintAssist.Hint="Contraseña" FontWeight="Bold"
+                      materialDesign:TextFieldAssist.HasClearButton="True"
+                      Margin="23,174,79,0" Grid.Row="1"
+                      MaxLength="20"
+                        />
+                <StackPanel x:Name="Sp_bts" HorizontalAlignment="Right"  Height="53" Orientation="Horizontal"  VerticalAlignment="Bottom" Width="254" Grid.ColumnSpan="2" Grid.Row="2">
+                    <Button x:Name="btnEntrar" Margin="0,0,10,0" Content="Entrar" FontSize="16" TabIndex="2" Height="48" Width="114" Click="btnEntrar_Click" Cursor="Hand"/>
+                    <Button x:Name="btnRegistrar" Content="Registrar"   FontSize="16" TabIndex="3" Height="48" Width="114" Click="btnRegistrar_Click"  Cursor="Hand"  />
+                </StackPanel>
+
+            </Grid>
+        </GroupBox>
+
+
+    </Grid>
+</Window>

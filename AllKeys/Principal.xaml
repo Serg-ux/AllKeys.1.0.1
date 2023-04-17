@@ -1,0 +1,40 @@
+﻿<Window x:Class="AllKeys.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllKeys"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Principal" d:Height="720" d:Width="1280" MinWidth="1280" MinHeight="720"
+        WindowStartupLocation="CenterScreen"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"  
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="16"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+         ShowInTaskbar="False"
+         >
+    <Grid Background="#02735E">
+        <StackPanel HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top">
+            <Menu IsMainMenu="True" FlowDirection="RightToLeft">
+                <MenuItem Header="Cuenta" FontSize="20">
+                    <MenuItem x:Name="perfil" Header="Perfil " FontSize="14" Icon="{materialDesign:PackIcon Kind=Account}" Click="perfil_Click"/>
+                    <Separator />
+                    <MenuItem x:Name="Ayuda" Header="ayuda " FontSize="14" Icon="{materialDesign:PackIcon Kind=Help}" Click="Ayuda_Click"/>
+                    <Separator />
+                    <MenuItem x:Name="salir" Header="Cerrar Sesión" FontSize="14" Icon="{materialDesign:PackIcon Kind=ExitToApp}" Click="salir_Click" />
+
+
+                </MenuItem>
+                <MenuItem x:Name="carrito"  Header="Carrito" FontSize="20" Click="carrito_Click"  />
+                <MenuItem x:Name="Juegosbt"  Header="Juegos" FontSize="20" Click="Juegosbt_Click" />
+            </Menu>
+        </StackPanel>
+        <StackPanel x:Name="Sp_admin" HorizontalAlignment="Left" Margin="0,-2,0,0" Height="77" Orientation="Horizontal"  VerticalAlignment="Top" Width="370">
+            <Button x:Name="btadminGame" Content="Admin Games" FontSize="16" Height="56" Width="156" Margin="10,0,20,0" Click="btadminGame_Click"/>
+            <Button x:Name="btadminUser" Content="Admin User" FontSize="16" Height="56" Width="156" Margin="10,0,20,0" Click="btadminUser_Click"/>
+        </StackPanel>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,87,0,0"/>
+    </Grid>
+</Window>

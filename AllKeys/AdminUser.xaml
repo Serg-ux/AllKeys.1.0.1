@@ -1,0 +1,65 @@
+﻿<Window x:Class="AllKeys.AdminUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllKeys"
+        mc:Ignorable="d"
+         WindowStartupLocation="CenterScreen"
+        Title="AdminUser" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        d:DesignHeight="720" d:DesignWidth="1280" MinWidth="1280" MinHeight="720"
+        Closing="Window_Closing"
+        >
+    <Grid Background="#6bc285">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="dgUsuarios" IsReadOnly="True" HorizontalAlignment="Center" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserAddRows="False" SelectionMode="Single" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Margin="0,23,0,23"   SelectionChanged="dgUsuarios_SelectionChanged" Width="1186">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding UsuarioId}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding UsuarioNombre}"/>
+                <DataGridTextColumn Header="Contraseña" Binding="{Binding UsuarioContra}"/>
+                <DataGridTextColumn Header="Telefono" Binding="{Binding UsuarioTlf}"/>
+                <DataGridTextColumn Header="Correo" Binding="{Binding UsuarioCorreo}"/>
+                <DataGridTextColumn Header="Color favorito" Binding="{Binding UsuarioColor_Fav}"/>
+                <DataGridTextColumn Header="Rol" Binding="{Binding Path=Rol.RolNombre}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Background="White"  x:Name="gbFormularioC" Header="Datos de usuario" Margin="47,0,47,86" Grid.RowSpan="2" Grid.Row="1" >
+            <Grid x:Name="gContenedor5a" Margin="0,0,0,36">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox TabIndex="0" Grid.Column="0" x:Name="txtNombre" VerticalAlignment="Top" Margin="10,69,10,0" FontSize="14" Text="{Binding UsuarioNombre, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="30" Height="31"/>
+                <TextBox TabIndex="1" Grid.Row="1"  x:Name="txtContra" VerticalAlignment="Top" Margin="10,73,10,0" FontSize="14" Text="{Binding UsuarioContra, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="20" Height="27"/>
+                <TextBox TabIndex="3" Grid.Column="1" Grid.Row="0"  x:Name="txtTelefono" VerticalAlignment="Top" Margin="10,69,10,0" FontSize="14" Text="{Binding UsuarioTlf, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  MaxLength="9" Height="31"/>
+                <TextBox TabIndex="4" Grid.Column="1" Grid.Row="1"  x:Name="txtCorreo" VerticalAlignment="Top" Margin="10,73,10,0" FontSize="14" Text="{Binding UsuarioCorreo, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="40" Height="27"/>
+                <ComboBox TabIndex="8" x:Name="cbRol" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" 
+                    materialDesign:HintAssist.Hint="rol" Style="{StaticResource MaterialDesignComboBox}"   Margin="10,73,10,0" FontSize="14" SelectedValue="{Binding RolId, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+                <TextBox TabIndex="7" Grid.Column="2"  x:Name="txtColorFav" VerticalAlignment="Top" Margin="10,72,10,0" FontSize="14" Text="{Binding UsuarioColor_Fav, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="20" Height="28"/>
+                <Label Content="Nombre Usuario" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244"/>
+                <Label Content="Telefono" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1"/>
+                <Label Content="Color favorito (seguridad)" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="2"/>
+                <Label Content="Contraseña" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1"/>
+                <Label Content="Correo" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1"/>
+                <Label Content="Premium" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+        </GroupBox>
+        <WrapPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,10,47,0">
+            <Button x:Name="btnGuardar" ToolTip="guardar" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=ContentSave}" Margin="10" FontSize="16"  Cursor="Hand" Height="50" Width="62" Click="btnGuardar_Click_1"  />
+            <Button x:Name="btnBorrar" ToolTip="eliminar" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=TrashCan}" Margin="10" FontSize="16" Height="50" Width="62" Click="btnBorrar_Click_1" />
+        </WrapPanel>
+
+    </Grid>
+</Window>
