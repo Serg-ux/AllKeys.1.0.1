@@ -15,7 +15,7 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
          ShowInTaskbar="False"
          >
-    <Grid Background="#02735E">
+    <Grid Background="#16b595">
         <StackPanel HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top">
             <Menu IsMainMenu="True" FlowDirection="RightToLeft">
                 <MenuItem Header="Cuenta" FontSize="20">

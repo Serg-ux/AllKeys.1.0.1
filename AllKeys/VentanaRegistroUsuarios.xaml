@@ -14,10 +14,10 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         
          ShowInTaskbar="False">
- 
-    <Grid Name="gContenido" Background="#02735E" IsEnabled="True" Visibility="Visible">
 
-        <Grid x:Name="gContenidoUs" Background="#02735E"  IsEnabled="True" Visibility="Visible">
+    <Grid Name="gContenido" Background="#16b595" IsEnabled="True" Visibility="Visible">
+
+        <Grid x:Name="gContenidoUs" Background="#16b595"  IsEnabled="True" Visibility="Visible">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="49*" />

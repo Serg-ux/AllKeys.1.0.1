@@ -10,7 +10,7 @@
         d:DesignHeight="720" d:DesignWidth="1280" MinWidth="1280" MinHeight="720"
         Closing="Window_Closing"
         >
-    <Grid Background="#6bc285">
+    <Grid Background="#16b595">
         <Grid.RowDefinitions>
 
             <RowDefinition Height="31*"/>

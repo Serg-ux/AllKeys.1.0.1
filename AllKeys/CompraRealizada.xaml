@@ -13,7 +13,7 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="16"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
-    <Grid Background="#02735E">
+    <Grid Background="#16b595">
         <Grid.RowDefinitions>
             <RowDefinition Height="527*"></RowDefinition>
             <RowDefinition Height="177*"></RowDefinition>

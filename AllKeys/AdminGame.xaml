@@ -11,16 +11,16 @@
         Title="AdminGame"
         Closing="Window_Closing"
         >
-    <Grid Background="#6bc285">
+    <Grid Background="#16b595">
         <Grid.RowDefinitions>
 
             <RowDefinition Height="36*"/>
             <RowDefinition Height="320"/>
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-        <Label Content="VIDEOJUEGOS" HorizontalAlignment="Left" Height="31" Margin="34,0,0,0" VerticalAlignment="Top" />
-        <Label Content="COPIAS" HorizontalAlignment="Right" Height="31" Margin="0,0,348,0" VerticalAlignment="Top" />
-        <DataGrid x:Name="dgVideojuegos"  IsReadOnly="True" CanUserAddRows="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" SelectionMode="Single" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"    SelectionChanged="dgVideojuegos_SelectionChanged" Margin="34,23,0,10">
+        <Label Content="VIDEOJUEGOS" HorizontalAlignment="Left" FontWeight="Bold" Height="31" Margin="34,0,0,0" VerticalAlignment="Top" />
+        <Label Content="COPIAS" FontWeight="Bold" HorizontalAlignment="Right" Height="31" Margin="0,0,348,0" VerticalAlignment="Top" />
+        <DataGrid x:Name="dgVideojuegos"  IsReadOnly="True" CanUserAddRows="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" SelectionMode="Single" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"    SelectionChanged="dgVideojuegos_SelectionChanged" Margin="34,32,0,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="50" Binding="{Binding Path=VideojuegoId}"/>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Path=VideojuegoName}"/>
