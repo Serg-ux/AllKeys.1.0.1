@@ -28,7 +28,6 @@
                 <PasswordBox
                       x:Name="pb_contra" FontSize="16"
                       materialDesign:HintAssist.Hint="Contraseña" FontWeight="Bold"
-                      materialDesign:TextFieldAssist.HasClearButton="True"
                       Margin="23,174,79,0" Grid.Row="1"
                       MaxLength="20"
                         />
