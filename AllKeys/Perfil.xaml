@@ -38,12 +38,12 @@
                 <ComboBox TabIndex="8" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" 
             materialDesignMahApps:HintAssist.Hint="rol" Style="{StaticResource MaterialDesignComboBox}" x:Name="cbRol"  Margin="10,73,10,0" FontSize="14" SelectedValue="{Binding RolId, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
                 <TextBox TabIndex="7" Grid.Column="2"  x:Name="txtColorFav" VerticalAlignment="Top" Margin="10,72,10,0" FontSize="14" Text="{Binding UsuarioColor_Fav, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="20" Height="28"/>
-                <Label Content="Nombre Usuario" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244"/>
-                <Label Content="Telefono" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1"/>
-                <Label Content="Color favorito (seguridad)" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="2"/>
-                <Label Content="Contraseña" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1"/>
-                <Label Content="Correo" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1"/>
-                <Label Content="Premium" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="2"/>
+                <Label Content="Nombre Usuario" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Style="{StaticResource ReadableLabel}"/>
+                <Label Content="Telefono" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
+                <Label Content="Color favorito (seguridad)" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="2" Style="{StaticResource ReadableLabel}"/>
+                <Label Content="Contraseña" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Style="{StaticResource ReadableLabel}"/>
+                <Label Content="Correo" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
+                <Label Content="Premium" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="2" Style="{StaticResource ReadableLabel}"/>
             </Grid>
         </GroupBox>
         <WrapPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right"  Width="92" Margin="0,54,10,-44">

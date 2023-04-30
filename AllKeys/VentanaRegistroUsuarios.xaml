@@ -67,12 +67,12 @@ ValidatesOnDataErrors=True}">
 UpdateSourceTrigger=PropertyChanged
 , NotifyOnValidationError=True,
 ValidatesOnDataErrors=True}" MaxLength="20" Height="28"/>
-                    <Label Content="Nombre Usuario" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244"/>
-                    <Label Content="Telefono" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1"/>
-                    <Label Content="Color favorito (seguridad)" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="2"/>
-                    <Label Content="Contraseña" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1"/>
-                    <Label Content="Correo" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1"/>
-                    <Label Content="Premium" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="2"/>
+                    <Label Content="Nombre Usuario" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Style="{StaticResource ReadableLabel}"/>
+                    <Label Content="Telefono" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
+                    <Label Content="Color favorito (seguridad)" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="2" Style="{StaticResource ReadableLabel}"/>
+                    <Label Content="Contraseña" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Style="{StaticResource ReadableLabel}"/>
+                    <Label Content="Correo" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
+                    <Label Content="Premium" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="2" Style="{StaticResource ReadableLabel}"/>
                 </Grid>
             </GroupBox>
 
