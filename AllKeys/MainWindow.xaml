@@ -35,6 +35,21 @@
                     <Button x:Name="btnEntrar" Margin="0,0,10,0" Content="Entrar" FontSize="16" TabIndex="2" Height="48" Width="114" Click="btnEntrar_Click" Cursor="Hand"/>
                     <Button x:Name="btnRegistrar" Content="Registrar"   FontSize="16" TabIndex="3" Height="48" Width="114" Click="btnRegistrar_Click"  Cursor="Hand"  />
                 </StackPanel>
+                <Button x:Name="bt_pss_recovery" Content="¿Contraseña Olvidada?" FontSize="16" HorizontalAlignment="Left" Height="47" Grid.Row="2" VerticalAlignment="Bottom" Width="171" Click="bt_pss_recovery_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="Blue" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+
 
             </Grid>
         </GroupBox>

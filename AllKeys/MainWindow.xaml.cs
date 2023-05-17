@@ -63,5 +63,12 @@ namespace AllKeys
             }
            
         }
+
+        private void bt_pss_recovery_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }
