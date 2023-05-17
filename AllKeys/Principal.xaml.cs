@@ -1,6 +1,7 @@
-﻿using AllKeys.Modelo;
+﻿ using AllKeys.Modelo;
 using ExamenVentas.DAL;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -85,10 +86,10 @@ namespace AllKeys
             this.Close();
         }
 
+
         private void Ayuda_Click(object sender, RoutedEventArgs e)
         {
-            string fileName = "MANUAL_USUARIO.pdf";
-            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Ayuda", fileName);
+            string filePath = @"C:\Users\aguil\Desktop\AllKeys.1.0.1\AllKeys\Archivos\MANUAL_USUARIO.pdf";
 
             try
             {
@@ -103,5 +104,24 @@ namespace AllKeys
                 MessageBox.Show("Error al abrir el archivo: " + ex.Message);
             }
         }
+
+        //private void Ayuda_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string fileName = "MANUAL_USUARIO.pdf";
+        //    string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Ayuda", fileName);
+
+        //    try
+        //    {
+        //        ProcessStartInfo psi = new ProcessStartInfo();
+        //        psi.FileName = "cmd";
+        //        psi.Arguments = $"/c start \"\" \"{filePath}\"";
+        //        psi.WindowStyle = ProcessWindowStyle.Hidden;
+        //        Process.Start(psi);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error al abrir el archivo: " + ex.Message);
+        //    }
+        //}
     }
 }

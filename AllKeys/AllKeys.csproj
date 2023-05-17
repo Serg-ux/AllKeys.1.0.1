@@ -29,7 +29,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="bin\Debug\net6.0-windows\Ayuda\MANUAL_USUARIO.pdf" />
+    <Folder Include="bin\Debug\net6.0-windows\Ayuda\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Archivos\MANUAL_USUARIO.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
