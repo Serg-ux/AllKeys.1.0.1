@@ -36,5 +36,6 @@
             <Button x:Name="btadminUser" Content="Admin User" FontSize="16" Height="56" Width="156" Margin="10,0,20,0" Click="btadminUser_Click"/>
         </StackPanel>
         <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,87,0,0"/>
+        <Image x:Name="ImgCentro" HorizontalAlignment="Center" Height="704"  VerticalAlignment="Center" Width="1339" Source="/Allkeys-removebg-preview.png"/>
     </Grid>
 </Window>

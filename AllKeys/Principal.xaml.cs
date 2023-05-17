@@ -45,12 +45,13 @@ namespace AllKeys
         {
             Games game = new Games();
             frame.Content = game;
-
+            ImgCentro.Visibility = Visibility.Collapsed;
         }
 
         private void perfil_Click(object sender, RoutedEventArgs e)
         {
             frame.Content = perfill;
+            ImgCentro.Visibility = Visibility.Collapsed;
         }
 
         private void salir_Click(object sender, RoutedEventArgs e)
@@ -69,6 +70,7 @@ namespace AllKeys
         private void carrito_Click(object sender, RoutedEventArgs e)
         {
             frame.Content = caritoo;
+            ImgCentro.Visibility = Visibility.Collapsed;
         }
 
         private void btadminGame_Click(object sender, RoutedEventArgs e)
@@ -76,7 +78,7 @@ namespace AllKeys
             AdminGame adminGame =new AdminGame();
             adminGame.Show();
             this.Close();
-            
+            ImgCentro.Visibility = Visibility.Collapsed;
         }
 
         private void btadminUser_Click(object sender, RoutedEventArgs e)
@@ -84,6 +86,7 @@ namespace AllKeys
             AdminUser adminUser =new AdminUser();
             adminUser.Show();
             this.Close();
+            ImgCentro.Visibility = Visibility.Collapsed;
         }
 
 
@@ -98,6 +101,7 @@ namespace AllKeys
                 psi.Arguments = $"/c start \"\" \"{filePath}\"";
                 psi.WindowStyle = ProcessWindowStyle.Hidden;
                 Process.Start(psi);
+                ImgCentro.Visibility = Visibility.Collapsed;
             }
             catch (Exception ex)
             {
