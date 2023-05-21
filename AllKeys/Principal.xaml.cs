@@ -92,7 +92,7 @@ namespace AllKeys
 
         private void Ayuda_Click(object sender, RoutedEventArgs e)
         {
-            string filePath = @"C:\Users\aguil\Desktop\AllKeys.1.0.1\AllKeys\Archivos\MANUAL_USUARIO.pdf";
+            string filePath = @"C:\Users\Serg-ux\source\repos\Serg-ux\AllKeys.1.0.1\AllKeys\Archivos\MANUAL_USUARIO.pdf";
 
             try
             {
