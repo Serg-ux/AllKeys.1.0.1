@@ -23,6 +23,11 @@ namespace AllKeys.DAL
             return Get(u => u.UsuarioNombre == nombre && u.UsuarioContra == contraseña).FirstOrDefault();
 
         }
+        public Usuario VerificarUsGmail(string correo)
+        {
+            return Get(u => u.UsuarioCorreo == correo).FirstOrDefault();
+
+        }
         public Usuario BuscarUsId(int id)
         {
             return Get(u => u.UsuarioId == id).FirstOrDefault();

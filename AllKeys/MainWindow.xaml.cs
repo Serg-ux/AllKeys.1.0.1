@@ -66,8 +66,8 @@ namespace AllKeys
 
         private void bt_pss_recovery_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            CambioContra cambioContra = new CambioContra();
+            cambioContra.Show();
             this.Close();
         }
     }
