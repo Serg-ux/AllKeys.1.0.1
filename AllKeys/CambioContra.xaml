@@ -32,7 +32,7 @@
                 <TextBox x:Name="txtCorreo" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI"  materialDesign:HintAssist.Hint="Correo electrónico" Margin="51,124,51,50" Grid.Row="1"/>
 
                 <StackPanel x:Name="Sp_bts" HorizontalAlignment="Right"  Height="53" Orientation="Horizontal"  VerticalAlignment="Bottom" Width="112" Grid.Row="2">
-                    <Button x:Name="btnVerificar" Margin="0,0,10,0" Content="Verificar" FontSize="16" TabIndex="2" Height="48" Width="112" Cursor="Hand"/>
+                    <Button x:Name="btnVerificar" Margin="0,0,10,0" Content="Verificar" FontSize="16" TabIndex="2" Height="48" Width="112" Cursor="Hand" Click="btnVerificar_Click_1"/>
                 </StackPanel>
             </Grid>
         </GroupBox>
