@@ -27,7 +27,7 @@
         </DataGrid>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,41" Width="326" Grid.Row="1">
             <Button x:Name="btnLimpiar" ToolTip="eliminar del carrito" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=Clear}"   FontSize="16" Height="43"  Margin="0,0,20,0" Width="152" Cursor="Hand" Click="btnLimpiar_Click"    />
-            <Button x:Name="btnComprar" Content="Comprar" ToolTip="comprar"  FontSize="16" Height="43" Width="152" Cursor="Hand" Click="btnComprar_Click"    />
+            <Button x:Name="btnComprar" Content="Comprar" ToolTip="comprar"  FontSize="20" Height="43" Width="152" Cursor="Hand" Click="btnComprar_Click"    />
         </WrapPanel>
 
 

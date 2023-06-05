@@ -29,10 +29,10 @@
                 </Grid.RowDefinitions>
                 <Button x:Name="btnVolver" Content="{materialDesign:PackIcon Kind=ArrowBack}"  ToolTip="volver inicio" Style="{DynamicResource MaterialDesignRaisedButton}"  FontSize="14" Grid.Row="0" Cursor="Hand" Width="74" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnVolver_Click" Height="26"/>
                 <Image  Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Width="182" Source="/Allkeys-removebg-preview.png" Margin="0,46,0,0"/>
-                <TextBox x:Name="txtCorreo" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI"  materialDesign:HintAssist.Hint="Correo electrónico" Margin="51,124,51,50" Grid.Row="1"/>
+                <TextBox x:Name="txtCorreo" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI"  materialDesign:HintAssist.Hint="Correo electrónico" Margin="51,124,51,50" Grid.Row="1"/>
 
                 <StackPanel x:Name="Sp_bts" HorizontalAlignment="Right"  Height="53" Orientation="Horizontal"  VerticalAlignment="Bottom" Width="112" Grid.Row="2">
-                    <Button x:Name="btnVerificar" Margin="0,0,10,0" Content="Verificar" FontSize="16" TabIndex="2" Height="48" Width="112" Cursor="Hand" Click="btnVerificar_Click_1"/>
+                    <Button x:Name="btnVerificar" Margin="0,0,10,0" Content="Verificar" FontSize="20" TabIndex="2" Height="48" Width="112" Cursor="Hand" Click="btnVerificar_Click_1"/>
                 </StackPanel>
             </Grid>
         </GroupBox>

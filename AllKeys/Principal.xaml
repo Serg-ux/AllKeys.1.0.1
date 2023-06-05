@@ -30,8 +30,8 @@
             </Menu>
         </StackPanel>
         <StackPanel x:Name="Sp_admin" HorizontalAlignment="Left" Margin="0,-2,0,0" Height="77" Orientation="Horizontal"  VerticalAlignment="Top" Width="370">
-            <Button x:Name="btadminGame" Content="Admin Games" FontSize="16" Height="56" Width="156" Margin="10,0,20,0" Click="btadminGame_Click"/>
-            <Button x:Name="btadminUser" Content="Admin User" FontSize="16" Height="56" Width="156" Margin="10,0,20,0" Click="btadminUser_Click"/>
+            <Button x:Name="btadminGame" Content="Games" FontSize="20" Height="56" Width="156" Margin="10,0,20,0" Click="btadminGame_Click"/>
+            <Button x:Name="btadminUser" Content="Users" FontSize="20" Height="56" Width="156" Margin="10,0,20,0" Click="btadminUser_Click"/>
         </StackPanel>
         <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,87,0,0"/>
     </Grid>

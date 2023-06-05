@@ -24,18 +24,18 @@
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
                 <Image  Height="180" VerticalAlignment="Center" HorizontalAlignment="Center" Width="182" Source="/Allkeys-removebg-preview.png"/>
-                <TextBox x:Name="txtNombre" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI"  materialDesign:HintAssist.Hint="Usuario" MaxLength="30" Margin="23,38,79,136" Grid.Row="1"/>
+                <TextBox x:Name="txtNombre" FontSize="25" FontWeight="Bold" FontFamily="Segoe UI"  materialDesign:HintAssist.Hint="Usuario" MaxLength="30" Margin="23,38,79,136" Grid.Row="1"/>
                 <PasswordBox
-                      x:Name="pb_contra" FontSize="16"
+                      x:Name="pb_contra" FontSize="25"
                       materialDesign:HintAssist.Hint="Contraseña" FontWeight="Bold"
                       Margin="23,174,79,0" Grid.Row="1"
                       MaxLength="20"
                         />
                 <StackPanel x:Name="Sp_bts" HorizontalAlignment="Right"  Height="53" Orientation="Horizontal"  VerticalAlignment="Bottom" Width="254" Grid.ColumnSpan="2" Grid.Row="2">
-                    <Button x:Name="btnEntrar" Margin="0,0,10,0" Content="Entrar" FontSize="16" TabIndex="2" Height="48" Width="114" Click="btnEntrar_Click" Cursor="Hand"/>
-                    <Button x:Name="btnRegistrar" Content="Registrar"   FontSize="16" TabIndex="3" Height="48" Width="114" Click="btnRegistrar_Click"  Cursor="Hand"  />
+                    <Button x:Name="btnEntrar" Margin="0,0,10,0" Content="Entrar" FontSize="20" TabIndex="2" Height="48" Width="114" Click="btnEntrar_Click" Cursor="Hand"/>
+                    <Button x:Name="btnRegistrar" Content="Registrar"   FontSize="20" TabIndex="3" Height="48" Width="114" Click="btnRegistrar_Click"  Cursor="Hand"  />
                 </StackPanel>
-                <Button x:Name="bt_pss_recovery" Content="¿Contraseña Olvidada?" FontSize="16" HorizontalAlignment="Left" Height="47" Grid.Row="2" VerticalAlignment="Bottom" Width="171" Click="bt_pss_recovery_Click">
+                <Button x:Name="bt_pss_recovery" Content="¿Contraseña Olvidada?" FontSize="15" HorizontalAlignment="Left" Height="47" Grid.Row="2" VerticalAlignment="Bottom" Width="171" Click="bt_pss_recovery_Click">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="Transparent" />

@@ -42,8 +42,8 @@
             </Grid>
         </GroupBox>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="326" Grid.Row="1">
-            <Button x:Name="btnLimpiar" ToolTip="limpiar formulario" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=TrashCan}"   FontSize="16" Height="43"  Margin="0,0,20,0" Width="152" Cursor="Hand" Click="btnLimpiar_Click"    />
-            <Button x:Name="btnComprar" Content="Comprar" ToolTip="comprar"  FontSize="16" Height="43" Width="152" Cursor="Hand" Click="btnComprar_Click"    />
+            <Button x:Name="btnLimpiar" ToolTip="limpiar formulario" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=TrashCan}"   FontSize="20" Height="43"  Margin="0,0,20,0" Width="152" Cursor="Hand" Click="btnLimpiar_Click"    />
+            <Button x:Name="btnComprar" Content="Comprar" ToolTip="comprar"  FontSize="20" Height="43" Width="152" Cursor="Hand" Click="btnComprar_Click"    />
         </WrapPanel>
     </Grid>
 
