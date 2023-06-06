@@ -1,9 +1,8 @@
-﻿
-using AllKeys.DAL;
-using AllKeys.Modelo;
+﻿using AllKeys.Modelo;
 using ExamenVentas.DAL;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,22 +13,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Usuarios.Modelo;
 
 namespace AllKeys
 {
     /// <summary>
-    /// Lógica de interacción para AdminGame.xaml
+    /// Lógica de interacción para Carrito.xaml
     /// </summary>
-    public partial class AdminGame : Window
+    public partial class AdminGame : Page
     {
         Videojuego videojuego = new Videojuego();
-        Copia copia= new Copia();
+        Copia copia = new Copia();
         UnitOfWork bd = new UnitOfWork();
         Boolean nuevo = true;
-        Boolean new_copia= true;
-         
+        Boolean new_copia = true;
+        
+
         public AdminGame()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace AllKeys
                 gbFormularioV.DataContext = videojuego;
                 nuevo = false;
 
-                dgCopias.ItemsSource= bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
+                dgCopias.ItemsSource = bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
             }
         }
         private void Limpiar()
@@ -61,7 +62,8 @@ namespace AllKeys
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             String errores = Validacion.errores(videojuego);
-            if(txtCompañia.Text != "" && txtDescripcion.Text != "" && txtDisponible.Text != "" && txtNombre.Text != "" && txtPrecio.Text != "" && txtTipo.Text != ""){
+            if (txtCompañia.Text != "" && txtDescripcion.Text != "" && txtDisponible.Text != "" && txtNombre.Text != "" && txtPrecio.Text != "" && txtTipo.Text != "")
+            {
                 if (errores.Equals(""))
                 {
                     // Intentamos convertir el valor del TextBox a double y  a int
@@ -101,7 +103,7 @@ namespace AllKeys
 
         private void btnBorrar_Click(object sender, RoutedEventArgs e)
         {
-            if (dgVideojuegos.SelectedIndex !=-1)
+            if (dgVideojuegos.SelectedIndex != -1)
             {
                 if (MessageBox.Show("¿Seguro que desa borrar este videojuego?",
                  "Borrado",
@@ -113,7 +115,7 @@ namespace AllKeys
                     Limpiar();
                     dgVideojuegos.ItemsSource = bd.VideojuegosRepository.GetAll();
                 }
-                
+
             }
         }
 
@@ -152,12 +154,12 @@ namespace AllKeys
                 }
 
                 else MessageBox.Show(errores, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                
-                    bd.CopiasRepository.Update(copia);
-                    bd.Save();
-                
+
+                bd.CopiasRepository.Update(copia);
+                bd.Save();
+
                 Limpiar_Copia();
-                dgCopias.ItemsSource= bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
+                dgCopias.ItemsSource = bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
                 MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
@@ -188,15 +190,7 @@ namespace AllKeys
 
                 }
 
-            } 
+            }
         }
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Principal principal = new Principal();
-            principal.Show();
-            
-        }
-
-       
     }
 }

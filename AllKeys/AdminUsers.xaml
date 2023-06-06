@@ -1,15 +1,15 @@
-﻿<Window x:Class="AllKeys.AdminUser"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AllKeys"
-        mc:Ignorable="d"
-         WindowStartupLocation="CenterScreen"
-        Title="AdminUser" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        d:DesignHeight="720" d:DesignWidth="1280" MinWidth="1280" MinHeight="720"
-        Closing="Window_Closing"
-        >
+﻿<Page x:Class="AllKeys.AdminUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AllKeys"
+      xmlns:materialDesignMahApps="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="AdminUser">
+
     <Grid Background="#16b595">
         <Grid.RowDefinitions>
 
@@ -62,4 +62,4 @@
         </WrapPanel>
 
     </Grid>
-</Window>
+</Page>

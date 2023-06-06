@@ -27,6 +27,8 @@ namespace AllKeys
         private Games game = new Games();
         private Perfil perfill = new Perfil();
         private Carrito caritoo = new Carrito();
+        private AdminGame adminGame = new AdminGame();
+        private AdminUser adminUser = new AdminUser();
         public static UnitOfWork bd = new UnitOfWork();
 
         public Principal()
@@ -75,17 +77,13 @@ namespace AllKeys
 
         private void btadminGame_Click(object sender, RoutedEventArgs e)
         {
-            AdminGame adminGame =new AdminGame();
-            adminGame.Show();
-            this.Close();
+            frame.Content = adminGame;
             ImgCentro.Visibility = Visibility.Collapsed;
         }
 
         private void btadminUser_Click(object sender, RoutedEventArgs e)
         {
-            AdminUser adminUser =new AdminUser();
-            adminUser.Show();
-            this.Close();
+            frame.Content=adminUser;
             ImgCentro.Visibility = Visibility.Collapsed;
         }
 
