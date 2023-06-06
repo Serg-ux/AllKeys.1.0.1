@@ -16,7 +16,7 @@
          ShowInTaskbar="False"
          >
     <Grid Background="#16b595">
-        <Image x:Name="ImgCentro" HorizontalAlignment="Center" Height="704"  VerticalAlignment="Center" Width="1339" Source="/Allkeys-removebg-preview.png"/>
+        <Image x:Name="ImgCentro" HorizontalAlignment="Center" Height="704"  VerticalAlignment="Center" Width="990" Source="/Allkeys-removebg-preview.png"/>
         <StackPanel HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top">
             <Menu IsMainMenu="True" FlowDirection="RightToLeft">
                 <MenuItem x:Name="Ayuda" Header="Ayuda " FontSize="20"  Click="Ayuda_Click"/>
