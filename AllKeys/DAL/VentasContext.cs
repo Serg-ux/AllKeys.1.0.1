@@ -85,6 +85,19 @@ namespace AllKeys.DAL
                 .WithOne(r => r.Rol)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //claves alternas
+            modelBuilder.Entity<Videojuego>()
+                .HasAlternateKey(u => u.VideojuegoName);
+            modelBuilder.Entity<UsuarioRegistrado>()
+                .HasAlternateKey(u => u.Tarjeta);
+            modelBuilder.Entity<Usuario>()
+                .HasAlternateKey(u => u.UsuarioCorreo);
+            modelBuilder.Entity<Usuario>()
+                .HasAlternateKey(u => u.UsuarioTlf);
+            modelBuilder.Entity<Rol>()
+                .HasAlternateKey(u => u.RolNombre);
+            modelBuilder.Entity<Descuento>()
+                .HasAlternateKey(u => u.DescuentoCod);
 
             modelBuilder.Entity<Rol>().HasData(
                new Rol
@@ -232,7 +245,19 @@ namespace AllKeys.DAL
                    VideojuegoName = "League of Legends"
                }
            );
-            
+            modelBuilder.Entity<Videojuego>().HasData(
+              new Videojuego
+              {
+                  VideojuegoId = 6,
+                  Descripccion = "Survival",
+                  Disponible = 12,
+                  Precio = 30,
+                  Tipo = "Survival Online",
+                  VideojuegoCompania = "Facepunch Studios",
+                  VideojuegoName = "Rust"
+              }
+          );
+
         }
     }
 }

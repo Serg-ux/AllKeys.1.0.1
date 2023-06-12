@@ -70,5 +70,13 @@ namespace AllKeys
             cambioContra.Show();
             this.Close();
         }
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnEntrar_Click(sender, e);
+            }
+        }
+
     }
 }

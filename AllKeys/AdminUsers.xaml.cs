@@ -67,14 +67,15 @@ namespace AllKeys
                     {
                         bd.UsuariosRepository.Añadir(usuario);
                         bd.Save();
+                        Limpiar();
 
                     }
                     else
                     {
                         bd.UsuariosRepository.Update(usuario);
                         bd.Save();
+                        Limpiar();
                     }
-                    Limpiar();
                     dgUsuarios.ItemsSource = bd.UsuariosRepository.GetAll();
                     MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
