@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="ValidarTarjeta" d:Height="720" d:Width="1280"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize"
         
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"  
         TextElement.FontWeight="Medium"
@@ -16,10 +16,10 @@
          ShowInTaskbar="False">
     <Grid Background="#16b595">
         <Grid.RowDefinitions>
-            <RowDefinition Height="527*"></RowDefinition>
-            <RowDefinition Height="177*"></RowDefinition>
+            <RowDefinition Height="541*"></RowDefinition>
+            <RowDefinition Height="163*"></RowDefinition>
         </Grid.RowDefinitions>
-        <GroupBox x:Name="gbTarjeta" Background="White" Header="Datos Tarjetas" Margin="36,61,30,107" MaxHeight="450" MaxWidth="1300" Grid.RowSpan="1" >
+        <GroupBox x:Name="gbTarjeta" Background="White" Header="Datos Tarjetas" Margin="36,61,30,20" MaxHeight="450" MaxWidth="1300" Grid.RowSpan="1" >
             <Grid x:Name="gContenedor5a">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -41,7 +41,7 @@
 
             </Grid>
         </GroupBox>
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="326" Grid.Row="1">
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="326" Grid.Row="1" Height="43">
             <Button x:Name="btnLimpiar" ToolTip="limpiar formulario" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=TrashCan}"   FontSize="20" Height="43"  Margin="0,0,20,0" Width="152" Cursor="Hand" Click="btnLimpiar_Click"    />
             <Button x:Name="btnComprar" Content="Comprar" ToolTip="comprar"  FontSize="20" Height="43" Width="152" Cursor="Hand" Click="btnComprar_Click"    />
         </WrapPanel>

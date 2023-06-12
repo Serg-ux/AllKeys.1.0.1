@@ -105,25 +105,6 @@ namespace AllKeys
             {
                 MessageBox.Show("Error al abrir el archivo: " + ex.Message);
             }
-        }
-
-        //private void Ayuda_Click(object sender, RoutedEventArgs e)
-        //{
-        //    string fileName = "MANUAL_USUARIO.pdf";
-        //    string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Ayuda", fileName);
-
-        //    try
-        //    {
-        //        ProcessStartInfo psi = new ProcessStartInfo();
-        //        psi.FileName = "cmd";
-        //        psi.Arguments = $"/c start \"\" \"{filePath}\"";
-        //        psi.WindowStyle = ProcessWindowStyle.Hidden;
-        //        Process.Start(psi);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al abrir el archivo: " + ex.Message);
-        //    }
-        //}
+        } 
     }
 }

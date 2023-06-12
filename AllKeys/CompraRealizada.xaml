@@ -7,7 +7,7 @@
         xmlns:materialDesignMahApps="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="AllKeys.CompraRealizada"
         mc:Ignorable="d"
         Title="CompraRealizada"  d:Height="720" d:Width="1280"
-         WindowStartupLocation="CenterScreen"
+          WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize"
         
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"  
         TextElement.FontWeight="Medium"
@@ -21,9 +21,9 @@
         <Label HorizontalAlignment="Center" Height="64" Margin="0,100,0,0" VerticalAlignment="Top" Width="568" FontFamily="Miriam Libre" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <Label Content="¡COMPRA REALIZADA!"/>
         </Label>
-        <WrapPanel Orientation="Horizontal"  Width="350" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="127">
+        <WrapPanel Orientation="Horizontal"  Width="392" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Height="127">
             <Button x:Name="btInicio" ToolTip="Volver a la pagina principal" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesignMahApps:PackIcon Kind=ArrowBack}"   FontSize="16" Height="43"  Margin="0,0,40,0" Width="152" Cursor="Hand" Click="btInicio_Click"     />
-            <Button x:Name="btImprimir" Content="Imprimir Ticket" ToolTip="Imprimir el ticket de la compra"  FontSize="20" Height="43" Width="152" Cursor="Hand" Click="btImprimir_Click"     />
+            <Button x:Name="btImprimir" Content="Imprimir Ticket" ToolTip="Imprimir el ticket de la compra"  FontSize="20" Height="43" Width="196" Cursor="Hand" Click="btImprimir_Click"     />
         </WrapPanel>
         <Image HorizontalAlignment="Center" Height="304"  VerticalAlignment="Bottom" Margin="0,0,0,30" Width="307" Source="/Allkeys-removebg-preview.png"/>
 
