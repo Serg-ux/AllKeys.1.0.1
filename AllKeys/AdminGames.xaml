@@ -11,15 +11,18 @@
       Title="AdminGame">
 
     <Grid Background="#16b595">
+
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="36*"/>
-            <RowDefinition Height="320"/>
-            <RowDefinition Height="6*"/>
+            <RowDefinition Height="343*">
+
+            </RowDefinition>
+            <RowDefinition Height="283"/>
+            <RowDefinition Height="94*"/>
         </Grid.RowDefinitions>
-        <Label Content="VIDEOJUEGOS" HorizontalAlignment="Left" FontWeight="Bold" Height="31" Margin="34,0,0,0" VerticalAlignment="Top" Style="{StaticResource ReadableLabel}"/>
-        <Label Content="COPIAS" FontWeight="Bold" HorizontalAlignment="Right" Height="31" Margin="0,-4,329,0" VerticalAlignment="Top" Style="{StaticResource ReadableLabel}" />
-        <DataGrid x:Name="dgVideojuegos"  IsReadOnly="True" CanUserAddRows="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" SelectionMode="Single" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"    SelectionChanged="dgVideojuegos_SelectionChanged" Margin="34,32,0,10">
+        <Label Content="VIDEOJUEGOS" HorizontalAlignment="Left" FontWeight="Bold" Height="31" Margin="34,0,0,0" VerticalAlignment="Top" Style="{StaticResource ReadableLabel}" Width="116"/>
+        <Label Content="COPIAS" FontWeight="Bold" HorizontalAlignment="Right" Height="31" Margin="0,-4,329,0" VerticalAlignment="Top" Style="{StaticResource ReadableLabel}" Width="67" />
+        <DataGrid x:Name="dgVideojuegos"  IsReadOnly="True" CanUserAddRows="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" SelectionMode="Single" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"    SelectionChanged="dgVideojuegos_SelectionChanged" Margin="34,32,0,10" Width="796">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="50" Binding="{Binding Path=VideojuegoId}"/>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Path=VideojuegoName}"/>
@@ -45,7 +48,7 @@
 
             </WrapPanel>
         </WrapPanel>
-        <GroupBox x:Name="gbFormularioV" Background="White" Header="Datos de Videojuegos" Margin="36,20,30,21" Grid.Row="1" >
+        <GroupBox x:Name="gbFormularioV" Background="White" Header="Datos de Videojuegos"  Grid.Row="1" >
             <Grid x:Name="gContenedor5a">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -76,15 +79,11 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Margin="0,0,0,-36" VerticalAlignment="Bottom" Height="96">
-                <Button x:Name="btnGuardar" ToolTip="guardar juego" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=ContentSave}" Margin="10" FontSize="16" Click="btnGuardar_Click" Height="38" Width="63"  />
-                <Button x:Name="btnBorrar" ToolTip="eliminar juego" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=TrashCan}" Margin="10" FontSize="16" Click="btnBorrar_Click" Height="38" Width="63"  />
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1"  VerticalAlignment="Center" Height="66">
+                <Button x:Name="btnGuardar" ToolTip="guardar juego" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=ContentSave}" Margin="10" FontSize="16" Click="btnGuardar_Click" Height="38" Width="50"  />
+                <Button x:Name="btnBorrar" ToolTip="eliminar juego" Style="{DynamicResource MaterialDesignRaisedButton}" Content="{materialDesign:PackIcon Kind=TrashCan}" Margin="10" FontSize="16" Click="btnBorrar_Click" Height="38" Width="50"  />
 
             </WrapPanel>
-
-
-
         </Grid>
-
     </Grid>
 </Page>
