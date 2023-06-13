@@ -86,8 +86,6 @@ namespace AllKeys.DAL
                 .OnDelete(DeleteBehavior.Cascade);
 
             //claves alternas
-            modelBuilder.Entity<Videojuego>()
-                .HasAlternateKey(u => u.VideojuegoName);
             modelBuilder.Entity<UsuarioRegistrado>()
                 .HasAlternateKey(u => u.Tarjeta);
             modelBuilder.Entity<Usuario>()
@@ -192,7 +190,7 @@ namespace AllKeys.DAL
                     Descripccion="Juego competitivo basado en plantar bombas y cubrir",
                     Disponible=1,
                     Precio=12.5,
-                    Tipo="Shooter",
+                    Tipo="PC",
                     VideojuegoCompania="Valve",
                     VideojuegoName="Csgo"
                 }
@@ -204,7 +202,7 @@ namespace AllKeys.DAL
                    Descripccion = "Juego competitivo basado en plantar bombas y cubrir",
                    Disponible = 1,
                    Precio = 14,
-                   Tipo = "Shooter",
+                   Tipo = "PS4",
                    VideojuegoCompania = "Riot Games",
                    VideojuegoName = "Valorant"
                }
@@ -216,7 +214,7 @@ namespace AllKeys.DAL
                    Descripccion = "Shooter",
                    Disponible = 1,
                    Precio = 30,
-                   Tipo = "Shooter",
+                   Tipo = "PC",
                    VideojuegoCompania = "Activision",
                    VideojuegoName = "Call of Duty"
                }
@@ -228,7 +226,7 @@ namespace AllKeys.DAL
                    Descripccion = "Juego creativo",
                    Disponible = 1,
                    Precio = 16,
-                   Tipo = "Survival",
+                   Tipo = "PC",
                    VideojuegoCompania = "Mojang",
                    VideojuegoName = "Minecraft"
                }
@@ -240,7 +238,7 @@ namespace AllKeys.DAL
                    Descripccion = "Perdida de tiempo",
                    Disponible = 1,
                    Precio = 0,
-                   Tipo = "MMO",
+                   Tipo = "XBOX",
                    VideojuegoCompania = "Riot Games",
                    VideojuegoName = "League of Legends"
                }
@@ -252,7 +250,7 @@ namespace AllKeys.DAL
                   Descripccion = "Survival",
                   Disponible = 12,
                   Precio = 30,
-                  Tipo = "Survival Online",
+                  Tipo = "PC",
                   VideojuegoCompania = "Facepunch Studios",
                   VideojuegoName = "Rust"
               }

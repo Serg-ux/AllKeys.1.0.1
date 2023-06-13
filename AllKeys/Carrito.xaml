@@ -20,7 +20,7 @@
             <DataGrid.Columns>
 
                 <DataGridTextColumn Header="Nombre" Binding="{Binding VideojuegoName}"/>
-                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
+                <DataGridTextColumn Header="Plataforma" Binding="{Binding Tipo }"/>
                 <DataGridTextColumn Header="Compañia" Binding="{Binding VideojuegoCompania }"/>
                 <DataGridTextColumn Header="Precio" Binding="{Binding Precio }"/>
             </DataGrid.Columns>

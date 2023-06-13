@@ -29,7 +29,7 @@
                 <DataGridTextColumn Header="Compañia" Binding="{Binding Path= VideojuegoCompania }"/>
                 <DataGridTextColumn Header="Descripcion" Binding="{Binding Path= Descripccion}"/>
                 <DataGridTextColumn Header="Precio" Binding="{Binding  Path= Precio }"/>
-                <DataGridTextColumn Header="Tipo" Binding="{Binding Path= Tipo }"/>
+                <DataGridTextColumn Header="Plataforma" Binding="{Binding Path= Tipo }"/>
                 <DataGridTextColumn Header="Disponible" Binding="{Binding Path= Disponible}"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -48,7 +48,7 @@
 
             </WrapPanel>
         </WrapPanel>
-        <GroupBox x:Name="gbFormularioV" Background="White" Header="Datos de Videojuegos"  Grid.Row="1" >
+        <GroupBox x:Name="gbFormularioV" Background="White" Header="Datos de Videojuegos" Margin="20,20,20,0"  Grid.Row="1" >
             <Grid x:Name="gContenedor5a">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -70,7 +70,7 @@
                 <Label Content="Compañia" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
                 <Label Content="Descripcion" HorizontalAlignment="Left" Height="31" Margin="10,21,0,0" VerticalAlignment="Top" Width="244" Grid.Column="2" Style="{StaticResource ReadableLabel}"/>
                 <Label Content="Precio" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Style="{StaticResource ReadableLabel}"/>
-                <Label Content="Tipo" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
+                <Label Content="Plataforma" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="1" Style="{StaticResource ReadableLabel}"/>
                 <Label Content="Disponible" HorizontalAlignment="Left" Height="31" Margin="10,31,0,0" VerticalAlignment="Top" Width="244" Grid.Row="1" Grid.Column="2" Style="{StaticResource ReadableLabel}"/>
             </Grid>
         </GroupBox>

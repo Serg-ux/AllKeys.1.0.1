@@ -16,7 +16,7 @@
         <DataGrid x:Name="dgVideojuegos" MouseDoubleClick="dgVideojuegos_MouseDoubleClick" IsReadOnly="true" CanUserResizeColumns="False" CanUserResizeRows="False"  CanUserAddRows="False" HorizontalAlignment="Center" SelectionMode="Single" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Margin="0,224,0,52"  Width="804">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding VideojuegoName}"/>
-                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
+                <DataGridTextColumn Header="Plataforma" Binding="{Binding Tipo }"/>
                 <DataGridTextColumn Header="Descripccion" Binding="{Binding Descripccion}"/>
                 <DataGridTextColumn Header="Compañia" Binding="{Binding VideojuegoCompania }"/>
                 <DataGridTextColumn Header="Precio" Binding="{Binding Precio }"/>

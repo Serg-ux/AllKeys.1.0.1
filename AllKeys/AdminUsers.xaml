@@ -28,7 +28,7 @@
                 <DataGridTextColumn Header="Rol" Binding="{Binding Path=Rol.RolNombre}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <GroupBox Background="White"  x:Name="gbFormularioC" Header="Datos de usuario" Margin="10,10,10,0"  Grid.Row="1" >
+        <GroupBox Background="White"  x:Name="gbFormularioC" Header="Datos de usuario" Margin="20,20,20,0"  Grid.Row="1" >
             <Grid x:Name="gContenedor5a" Margin="0,0,0,36">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
