@@ -130,42 +130,41 @@ namespace AllKeys
         }
         private void btnGuardarCopia_Click(object sender, RoutedEventArgs e)
         {
-            copia.VideojuegoId = videojuego.VideojuegoId;
-            copia.CopiaCod = tbCodCopia.Text;
-            String errores = Validacion.errores(copia);
-            if (dgVideojuegos.SelectedIndex != -1)
+            try
             {
-                if (errores.Equals(""))
+                copia.VideojuegoId = videojuego.VideojuegoId;
+                copia.CopiaCod = tbCodCopia.Text;
+                String errores = Validacion.errores(copia);
+                if (dgVideojuegos.SelectedIndex != -1)
                 {
-                    if (new_copia)
+                    if (errores.Equals(""))
                     {
-                        bd.CopiasRepository.Añadir(copia);
-                        bd.Save();
-
+                        if (new_copia)
+                        {
+                            bd.CopiasRepository.Añadir(copia);
+                            bd.Save();
+                        }
+                        else
+                        {
+                            bd.CopiasRepository.Update(copia);
+                            bd.Save();
+                        }
+                        Limpiar_Copia();
+                        dgCopias.ItemsSource = bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
+                        MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     else
                     {
-                        bd.CopiasRepository.Update(copia);
-                        bd.Save();
+                        MessageBox.Show(errores, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                    Limpiar_Copia();
-                    dgCopias.ItemsSource = bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
-                    MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-
-                else MessageBox.Show(errores, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-                bd.CopiasRepository.Update(copia);
-                bd.Save();
-
-                Limpiar_Copia();
-                dgCopias.ItemsSource = bd.CopiasRepository.CopiasFiltro(videojuego.VideojuegoId);
-                MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
-
             }
-            else MessageBox.Show("no se ha seleccionado ningun videojuego", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo una excepción: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
         private void Limpiar_Copia()
         {
             copia = new Copia();
