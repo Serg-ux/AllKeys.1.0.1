@@ -30,7 +30,7 @@ namespace AllKeys
         {
             if (txtApellidos.Text != "" && txtCV.Text != "" && txtnombre.Text != "" && txtTarjeta.Text != "")
             {
-                if (UsuarioRegistrado.ValidarSoloNumeros(txtTarjeta.Text) == true)
+                if (UsuarioRegistrado.ValidarSoloNumeros(txtTarjeta.Text) == true && txtTarjeta.Text.Length > 15)
                 {
                     if (UsuarioRegistrado.ValidarSoloNumeros(txtCV.Text) == true)
                     {
@@ -44,7 +44,7 @@ namespace AllKeys
                     }
                     else MessageBox.Show("CV erroneo", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                else MessageBox.Show("Tarjeta erronea", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                else MessageBox.Show("Tarjeta erronea. Tiene que contener entre 16 y 18 numeros", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else MessageBox.Show("Faltan datos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
