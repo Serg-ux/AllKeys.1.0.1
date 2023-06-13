@@ -59,7 +59,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox TabIndex="0" Grid.Column="0" x:Name="txtNombre" VerticalAlignment="Top" Margin="10,63,10,0" FontSize="14" Text="{Binding Path=VideojuegoName, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="20" Height="31"/>
+                <TextBox TabIndex="0" Grid.Column="0" x:Name="txtNombre" VerticalAlignment="Top" Margin="10,63,10,0" FontSize="14" Text="{Binding Path=VideojuegoName, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="20" Height="31" IsReadOnly="True"/>
                 <TextBox TabIndex="1" Grid.Row="1"  x:Name="txtPrecio" VerticalAlignment="Top" Margin="10,67,10,0" FontSize="14" Text="{Binding Path=Precio, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="3" Height="27"/>
                 <TextBox TabIndex="2" Grid.Column="1" Grid.Row="0"  x:Name="txtCompañia" VerticalAlignment="Top" Margin="10,63,10,0" FontSize="14" Text="{Binding Path=VideojuegoCompania , Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  MaxLength="30" Height="31"/>
                 <TextBox TabIndex="3" Grid.Column="1" Grid.Row="1"  x:Name="txtTipo" VerticalAlignment="Top" Margin="10,67,10,0" FontSize="14" Text="{Binding Path=Tipo, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" MaxLength="20" Height="27"/>

@@ -40,22 +40,51 @@ namespace AllKeys
             cbRol.DisplayMemberPath = "RolNombre";
             cbRol.SelectedValuePath = "RolId";
         }
-
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            if (txtColorFav.Text != "" && txtContra.Text != "" && txtCorreo.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && cbRol.SelectedIndex != -1)
+            try
             {
-                String errores = Validacion.errores(usuario);
-                if (errores.Equals(""))
+                if (txtColorFav.Text != "" && txtContra.Text != "" && txtCorreo.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && cbRol.SelectedIndex != -1)
                 {
+                    String errores = Validacion.errores(usuario);
+                    if (errores.Equals(""))
+                    {
                         Principal.bd.UsuariosRepository.Update(usuario);
                         Principal.bd.Save();
-                    MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(errores, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
-                else MessageBox.Show(errores, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                else
+                {
+                    MessageBox.Show("Faltan Datos", "Error Login", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
-            else
-                MessageBox.Show("Faltan Datos", "Error Login", MessageBoxButton.OK, MessageBoxImage.Error);
+            catch (Exception ex)
+            {
+                // Aquí puedes manejar la excepción como desees
+                MessageBox.Show("Se produjo una excepción: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
+        //private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (txtColorFav.Text != "" && txtContra.Text != "" && txtCorreo.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && cbRol.SelectedIndex != -1)
+        //    {
+        //        String errores = Validacion.errores(usuario);
+        //        if (errores.Equals(""))
+        //        {
+        //                Principal.bd.UsuariosRepository.Update(usuario);
+        //                Principal.bd.Save();
+        //            MessageBox.Show("Guardado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+        //        }
+        //        else MessageBox.Show(errores, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        //    }
+        //    else
+        //        MessageBox.Show("Faltan Datos", "Error Login", MessageBoxButton.OK, MessageBoxImage.Error);
+        //}
     }
 }
