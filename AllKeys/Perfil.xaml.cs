@@ -32,10 +32,14 @@ namespace AllKeys
             // Obtener la colección de roles desde la base de datos y ordenarla por nombre
             var roles = Principal.bd.RolesRepository.GetAll().OrderBy(r => r.RolNombre);
 
-            // Seleccionar el segundo y tercer rol y asignarlos al combobox
-            var rolesSeleccionados = roles.Skip(1).Take(2);
-            cbRol.ItemsSource = rolesSeleccionados;
-
+            if (usuario.RolId !=1)
+            {
+                // Seleccionar el segundo y tercer rol y asignarlos al combobox
+                var rolesSeleccionados = roles.Skip(1).Take(2);
+                cbRol.ItemsSource = rolesSeleccionados;
+            }
+            else { cbRol.ItemsSource = roles; }
+            
             // Establecer las propiedades DisplayMemberPath y SelectedValuePath como antes
             cbRol.DisplayMemberPath = "RolNombre";
             cbRol.SelectedValuePath = "RolId";
